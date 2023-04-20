@@ -69,5 +69,7 @@ REFERENCES "Employees" ("emp_no");
 ALTER TABLE "Employees" ADD CONSTRAINT "fk_Employees_emp_title_id" FOREIGN KEY("emp_title_id")
 REFERENCES "Titles" ("title_id");
 
-
-
+-- List the employee number, last name, first name, sex, and salary of each employee
+Select "Employees".emp_no, "Employees".last_name, "Employees".first_name, "Employees".sex, "Salaries".salary
+From "Employees"
+Join "Salaries" on "Employees".emp_no = "Salaries".emp_no;
